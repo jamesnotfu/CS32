@@ -1,0 +1,58 @@
+-----------
+James Fu
+105532210
+Homework 4
+-----------
+
+-----------
+QUESTION 1E
+-----------
+Everything is fine until the size is increased to a certain point, in which the
+pointers are reassigned to a different location. Thus, during the execution of test case
+3 if you attempt to access p you can't increment it since the pointers were reassigned
+and it throws you an error since the pointer most likely points to some junk/garbage location.
+
+----------
+QUESTION 3
+----------
+There is an issue because the insert function with two arguments uses comparisoon operators
+such as > which are not defined in the Coordinate class, so coordinates have no idea how to determine
+if they are greater or not. This can be fixed by defining a comparison operator in the Coordinate
+class to override the current one.
+
+-----------
+QUESTION 4b
+-----------
+You can't solve this using a one parameter list because then you can't store or pass along
+the path name since the function doesn't return any values. One way to fix this and successfully
+use a one parameter list would be to create a global variable and modify it within the function or
+use two variables like the method written.
+
+-----------
+QUESTION 5a
+-----------
+Since there are three nested for loops, the time complexity of the algorithm would be O(n^3). Each operation
+within each loop would just be O(1), but nesting these loops and passing through N for the element of N in the
+next loop and third loop would result in n^3 passes.
+
+-----------
+QUESTION 5b
+-----------
+This algorithm could end faster since it splits the number of passes for the second loop and makes it n/2. However,
+the worse case scenario still results in an O(n^3) algorithm. Here, i limits the number of times that j will execute
+in certain scenarios, but in the worse case scenario where no operations get skipped, the time complexity would remain
+the same.
+
+-----------
+QUESTION 6a
+-----------
+Both get and insert have a time complexity of n, so added together their time complexity is 2n. Since they are nested within
+a for loop the time complexity would be n*2n. The time complexity multiplied would be n*2n, but we can ignore constants
+so the simplified time complexity is O(n^2).
+
+-----------
+QUESTION 6b
+-----------
+insertBefore has a time complexity of O(1) and the member function contains two non-nested loops, so each loop has an individual
+time complexity of n. Thus, added together they have a time complexity of 2n, while the other lines have a complexity of O(1).
+Thus, we can conclude that the overall simplified time complexity is O(n).
